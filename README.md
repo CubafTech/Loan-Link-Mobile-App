@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Instagram Clone Challenge - Week One
 
 Welcome to the Instagram Clone Challenge - Week One! 📸
@@ -25,3 +26,6 @@ This project is part of an exciting series where we embark on the journey of rec
 - Implement basic UI components.
 
 Happy coding! 🚀
+=======
+# Loan-Link-Mobile-App
+>>>>>>> d1cd9991b2b7aa0d0abe54d984afd83c59cfe463
