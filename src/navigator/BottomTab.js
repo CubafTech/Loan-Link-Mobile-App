@@ -3,6 +3,9 @@ import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { COLORS, FONTS, icons, SIZES } from '../constants';
 import HomeScreen from '../screens/Main/Home/HomeScreen';
+import LoanScreen from '../screens/Main/Loan/LoanScreen';
+import NotificationScreen from '../screens/Main/Notification/NotificationScreen';
+import ProfileScreen from '../screens/Main/Profile/ProfileScreen';
 
 
 const Tab = createBottomTabNavigator();
@@ -25,25 +28,20 @@ const BottomTab = () => {
                 tabBarIcon: ({ focused, size, colour }) => {
                     let iconName;
                     if (route.name === 'Home') {
-                        iconName = focused ? icons.home : icons.home
+                        iconName = focused ? icons.home2 : icons.home
                         size = focused ? SIZES.h3 : SIZES.h3,
                             colour = focused ? COLORS.primary : COLORS.black
                     }
-                    else if (route.name === 'Search') {
-                        iconName = focused ? icons.saving : icons.saving
-                        size = focused ? SIZES.h3 : SIZES.h3,
-                            colour = focused ? COLORS.primary : COLORS.black
-                    }
-                    else if (route.name === 'Reels') {
-                        iconName = focused ? icons.work : icons.work
+                    else if (route.name === 'Loan') {
+                        iconName = focused ? icons.loan2 : icons.loan
                         size = focused ? SIZES.h3 : SIZES.h3,
                             colour = focused ? COLORS.primary : COLORS.black
                     } else if (route.name === 'Notification') {
-                        iconName = focused ? icons.profile : icons.profile
+                        iconName = focused ? icons.notification2 : icons.notification
                         size = focused ? SIZES.h3 : SIZES.h3,
                             colour = focused ? COLORS.primary : COLORS.black
                     } else if (route.name === 'Profile') {
-                        iconName = focused ? icons.profile : icons.profile
+                        iconName = focused ? icons.profile2 : icons.profile
                         size = focused ? SIZES.h3 : SIZES.h3,
                             colour = focused ? COLORS.primary : COLORS.black
                     }
@@ -53,7 +51,9 @@ const BottomTab = () => {
             })}
         >
             <Tab.Screen name='Home' component={HomeScreen} />
-
+            <Tab.Screen name='Loan' component={LoanScreen} />
+            <Tab.Screen name='Notification' component={NotificationScreen} />
+            <Tab.Screen name='Profile' component={ProfileScreen} />
         </Tab.Navigator>
     )
 }

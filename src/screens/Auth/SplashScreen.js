@@ -6,11 +6,14 @@ import { useNavigation } from '@react-navigation/native'
 const SplashScreen = () => {
     const navigation = useNavigation();
     useEffect(() => {
-        navigation.navigate('Main', { screen: "Bottom" })
+        setTimeout(() => {
+            // navigation.navigate('Main', { screen: "Bottom" })
+            navigation.navigate('IntroSlider')
+        }, 2000)
     }, [])
     return (
         <View style={styles.page}>
-            <Text style={{ ...FONTS.h2, }}>Instagram</Text>
+            <Text style={{ ...FONTS.h2, }}>Splash Screen</Text>
         </View>
     )
 }

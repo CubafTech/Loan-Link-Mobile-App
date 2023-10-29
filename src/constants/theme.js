@@ -14,23 +14,11 @@ export const COLORS = {
     offwhite: '#F6F7F9',
     black: "#000000",
     black2: "#1C1C1C",
-    primary: "#1319AD",
-    purple: "#6F0063",
-    dark: "#030E4A",
-    dark2: "#040B1B",
-    orange: "#ff7040",
-    secondary: "#00caf2",
-    green: "#025523",
-    gray: '#EFF2F7',
-    chocolate: '#5d5c6c',
-    chocolateBackground: '#CECFCD',
-    grey2: '#f6f5fa',
-    grey3: '#efefef',
-    gray4: '#B4B5B5',
-    red: 'red',
-    blue: "#001EC5",
-    blue2: "#030E4A",
-    green2: "#044021"
+    primary: "#7335EE",
+    secondary: "#00003C",
+    grey: "#C2C2C2",
+    grey2: "#D6D6D6",
+    grey3: "#333333",
 
 };
 
