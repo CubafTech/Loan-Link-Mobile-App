@@ -6,13 +6,13 @@ import { useNavigation } from '@react-navigation/native';
 const HomeScreen = () => {
     const navigation = useNavigation();
     const topData = [
-        { id: 1, title: "Total Loans", amount: 0 },
-        { id: 2, title: "Total Borrowed", amount: 0 },
-        { id: 3, title: "Active Loan", amount: 0 },
+        { id: 1, title: "Total Loans", amount: 0, color: "#F7EBFF", color2: "#7335EE", },
+        { id: 2, title: "Total Borrowed", amount: 0, color: "#FFF1D1", color2: "#B26C00" },
+        { id: 3, title: "Active Loan", amount: 0, color: "#FED7DC", color2: "#FDA5AF" },
     ];
     const actionData = [
         { id: 1, title: "Apply for Loan", iconName: icons.loan, color: "#F7EBFF", color2: "#7335EE", onPress: () => navigation.navigate("RequestLoan") },
-        { id: 2, title: "Make Repayment", iconName: icons.payment, color: "#FFF1D1", color2: "#B26C00", onPress: () => navigation.navigate("RequestLoan2") },
+        { id: 2, title: "Make Repayment", iconName: icons.payment, color: "#FFF1D1", color2: "#B26C00", onPress: () => navigation.navigate("RequestLoan") },
     ];
     return (
         <View style={styles.page}>
@@ -32,7 +32,7 @@ const HomeScreen = () => {
                     columnWrapperStyle={{ justifyContent: 'space-between' }}
                     renderItem={({ item }) => {
                         return (
-                            <View style={styles.container}>
+                            <View style={[styles.container, { backgroundColor: item.color, borderColor: item.color2 }]}>
                                 <Text style={{ ...FONTS.body5, color: COLORS.grey3 }}>{item.title}</Text>
                                 <Text style={{ ...FONTS.body3, color: COLORS.black }}>₦{item.amount}</Text>
                             </View>
@@ -86,7 +86,7 @@ const styles = StyleSheet.create({
     container: {
         height: SIZES.h1 * 2.7,
         width: SIZES.width * 0.29,
-        borderWidth: 1,
+        borderWidth: 0.3,
         borderRadius: SIZES.base,
         borderColor: COLORS.grey2,
         padding: SIZES.base

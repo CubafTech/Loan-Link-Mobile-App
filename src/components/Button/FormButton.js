@@ -18,6 +18,6 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         backgroundColor: COLORS.primary,
-        borderRadius: SIZES.h3,
+        borderRadius: SIZES.h4,
     },
 })
