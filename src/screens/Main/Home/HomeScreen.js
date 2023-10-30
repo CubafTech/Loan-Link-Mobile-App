@@ -1,16 +1,18 @@
 import { StyleSheet, Text, View, Image, TouchableOpacity, FlatList } from 'react-native'
 import React from 'react'
 import { COLORS, FONTS, icons, SIZES, images } from '../../../constants'
+import { useNavigation } from '@react-navigation/native';
 
 const HomeScreen = () => {
+    const navigation = useNavigation();
     const topData = [
         { id: 1, title: "Total Loans", amount: 0 },
         { id: 2, title: "Total Borrowed", amount: 0 },
         { id: 3, title: "Active Loan", amount: 0 },
     ];
     const actionData = [
-        { id: 1, title: "Apply for Loan", iconName: icons.loan, color: "#F7EBFF", color2: "#7335EE" },
-        { id: 2, title: "Make Repayment", iconName: icons.payment, color: "#FFF1D1", color2: "#B26C00" },
+        { id: 1, title: "Apply for Loan", iconName: icons.loan, color: "#F7EBFF", color2: "#7335EE", onPress: () => navigation.navigate("RequestLoan") },
+        { id: 2, title: "Make Repayment", iconName: icons.payment, color: "#FFF1D1", color2: "#B26C00", onPress: () => navigation.navigate("RequestLoan2") },
     ];
     return (
         <View style={styles.page}>
@@ -59,7 +61,7 @@ const HomeScreen = () => {
                         contentContainerStyle={{ marginHorizontal: 2 }}
                         renderItem={({ item }) => {
                             return (
-                                <TouchableOpacity style={[styles.quickCtn, { backgroundColor: item.color, borderColor: item.color2 }]}>
+                                <TouchableOpacity onPress={item.onPress} style={[styles.quickCtn, { backgroundColor: item.color, borderColor: item.color2 }]}>
                                     <Image source={item.iconName} style={{ height: SIZES.h1 * 0.9, width: SIZES.h1 * 0.9, tintColor: item.color2 }} />
                                     <Text style={{ ...FONTS.body4, color: item.color2, marginTop: 2 }}>{item.title}</Text>
                                 </TouchableOpacity>
