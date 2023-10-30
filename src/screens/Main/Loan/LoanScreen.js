@@ -1,6 +1,6 @@
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, Text, View, Image, FlatList } from 'react-native'
 import React from 'react'
-import { COLORS, SIZES, FONTS } from '../../../constants'
+import { COLORS, SIZES, FONTS, icons, images } from '../../../constants'
 import HeaderA from '../../../components/Header/HeaderA'
 
 const LoanScreen = () => {
@@ -17,6 +17,11 @@ const LoanScreen = () => {
             <Text style={{ ...FONTS.body5, color: COLORS.grey3 }}>Paid</Text>
             <Text style={{ ...FONTS.body5, color: COLORS.grey3 }}>Balance</Text>
           </View>
+        </View>
+        {/* LOAN HISTORY */}
+        <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', marginTop: SIZES.h1 }}>
+          <Text>Loan History</Text>
+          <Image source={icons.home} style={{ height: SIZES.h3, width: SIZES.h3 }} />
         </View>
       </View>
     </View>

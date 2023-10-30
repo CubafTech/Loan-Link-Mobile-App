@@ -1,5 +1,6 @@
 export const arrowdown = require('../../assets/icons/arrowdown.png')
 export const arrowleft = require('../../assets/icons/arrowleft.png')
+export const avatar = require('../../assets/icons/avatar.png')
 export const circle = require('../../assets/icons/circle.png')
 export const eye = require('../../assets/icons/eye.png')
 export const home = require('../../assets/icons/home.png')
@@ -16,6 +17,7 @@ export const thumb = require('../../assets/icons/thumb.png')
 export default {
     arrowdown,
     arrowleft,
+    avatar,
     circle,
     eye,
     home,

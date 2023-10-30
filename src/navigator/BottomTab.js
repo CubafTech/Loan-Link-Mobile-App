@@ -6,6 +6,7 @@ import HomeScreen from '../screens/Main/Home/HomeScreen';
 import LoanScreen from '../screens/Main/Loan/LoanScreen';
 import NotificationScreen from '../screens/Main/Notification/NotificationScreen';
 import ProfileScreen from '../screens/Main/Profile/ProfileScreen';
+import LenderHome from '../screens/Main/Home/LenderHome/LenderHome';
 
 
 const Tab = createBottomTabNavigator();
@@ -50,7 +51,8 @@ const BottomTab = () => {
                 headerShown: false
             })}
         >
-            <Tab.Screen name='Home' component={HomeScreen} />
+            <Tab.Screen name='Home' component={LenderHome} />
+            {/* <Tab.Screen name='Home' component={HomeScreen} /> */}
             <Tab.Screen name='Loan' component={LoanScreen} />
             <Tab.Screen name='Notification' component={NotificationScreen} />
             <Tab.Screen name='Profile' component={ProfileScreen} />

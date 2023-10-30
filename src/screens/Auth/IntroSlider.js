@@ -71,7 +71,7 @@ const IntroSlider = ({ ...props }) => {
     }
     return (
         <View style={{ flex: 1, backgroundColor: COLORS.white }}>
-            <StatusBar backgroundColor={COLORS.primary} barStyle="light-content" />
+            <StatusBar backgroundColor={COLORS.white} barStyle="dark-content" />
             <AppIntroSlider
                 data={slides}
                 renderItem={_renderItem}
