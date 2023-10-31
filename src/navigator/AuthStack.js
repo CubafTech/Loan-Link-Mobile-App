@@ -5,8 +5,8 @@ import SplashScreen from '../screens/Auth/SplashScreen';
 import Login from '../screens/Auth/Login';
 import CreateAccount from '../screens/Auth/CreateAccount';
 import IntroSlider from '../screens/Auth/IntroSlider';
-
-
+import AccountType from '../screens/Auth/AccountType';
+import OtpScreen from '../screens/Auth/OtpScreen';
 
 const AuthStack = () => {
     const Stack = createNativeStackNavigator();
@@ -16,9 +16,11 @@ const AuthStack = () => {
             <Stack.Screen name='IntroSlider' component={IntroSlider} />
             <Stack.Screen name='Login' component={Login} />
             <Stack.Screen name='CreateAccount' component={CreateAccount} />
+            <Stack.Screen name='AccountType' component={AccountType} />
+            <Stack.Screen name='OtpScreen' component={OtpScreen} />
         </Stack.Navigator>
-    )
-}
+    );
+};
 
 export default AuthStack
 

@@ -36,13 +36,14 @@ const CreateAccount = () => {
                 <FormInput title="Password" placeholder="Enter Password" eye={true} />
                 <Text style={{ ...FONTS.body4, color: COLORS.primary, textAlign: 'right' }}>Forgot Password</Text>
                 <View style={{ marginTop: SIZES.h1 * 2, flexDirection: 'row', alignItems: 'center', }}>
-                    <FormButton title="Create Account" onPress={() => navigation.navigate("Login")}
+                    <FormButton title="Create Account" onPress={() => navigation.navigate("OtpScreen")}
                         btnCtn={{ flex: 1, marginRight: SIZES.h5 }} />
                 </View>
+                <Text style={{ marginTop: SIZES.h5, ...FONTS.body4, textAlign: "center", color: COLORS.black }}>By clicking "Create Account", you agree to LoanLink's <Text style={{ color: COLORS.primary }}>Terms & Privacy Policy</Text></Text>
                 <View style={{ flexDirection: 'row', alignItems: 'center', marginTop: SIZES.h1 }}>
-                    <Text style={{ ...FONTS.body3c, color: COLORS.grey3, }}>New to LoanLink?</Text>
-                    <TouchableOpacity>
-                        <Text style={{ ...FONTS.body3c, color: COLORS.primary, }}> Create Account</Text>
+                    <Text style={{ ...FONTS.body3c, color: COLORS.grey3, }}>Have a LoanLink Account?</Text>
+                    <TouchableOpacity onPress={() => navigation.navigate("Login")}>
+                        <Text style={{ ...FONTS.body3c, color: COLORS.primary, }}> Login</Text>
                     </TouchableOpacity>
                 </View>
             </View>
