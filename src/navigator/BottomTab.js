@@ -51,8 +51,8 @@ const BottomTab = () => {
                 headerShown: false
             })}
         >
-            <Tab.Screen name='Home' component={LenderHome} />
-            {/* <Tab.Screen name='Home' component={HomeScreen} /> */}
+            {/* <Tab.Screen name='Home' component={LenderHome} /> */}
+            <Tab.Screen name='Home' component={HomeScreen} />
             <Tab.Screen name='Loan' component={LoanScreen} />
             <Tab.Screen name='Notification' component={NotificationScreen} />
             <Tab.Screen name='Profile' component={ProfileScreen} />

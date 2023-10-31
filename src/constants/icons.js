@@ -2,6 +2,7 @@ export const arrowdown = require('../../assets/icons/arrowdown.png')
 export const arrowleft = require('../../assets/icons/arrowleft.png')
 export const avatar = require('../../assets/icons/avatar.png')
 export const circle = require('../../assets/icons/circle.png')
+export const down = require('../../assets/icons/down.png')
 export const eye = require('../../assets/icons/eye.png')
 export const home = require('../../assets/icons/home.png')
 export const home2 = require('../../assets/icons/home2.png')
@@ -13,12 +14,15 @@ export const payment = require('../../assets/icons/payment.png')
 export const profile = require('../../assets/icons/profile.png')
 export const profile2 = require('../../assets/icons/profile2.png')
 export const thumb = require('../../assets/icons/thumb.png')
+export const up = require('../../assets/icons/up.png')
+
 
 export default {
     arrowdown,
     arrowleft,
     avatar,
     circle,
+    down,
     eye,
     home,
     home2,
@@ -30,4 +34,5 @@ export default {
     profile,
     profile2,
     thumb,
+    up,
 }
