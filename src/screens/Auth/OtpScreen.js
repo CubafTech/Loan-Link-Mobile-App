@@ -1,6 +1,6 @@
-import { StyleSheet, Text, TouchableOpacity, View, FlatList } from 'react-native'
+import { StyleSheet, Text, TouchableOpacity, View, FlatList, Image } from 'react-native'
 import React from 'react'
-import { COLORS, FONTS, SIZES } from '../../constants'
+import { COLORS, FONTS, images, SIZES } from '../../constants'
 import FormButton from '../../components/Button/FormButton'
 import { useNavigation } from '@react-navigation/native';
 
@@ -10,8 +10,9 @@ export default function OtpScreen() {
     return (
         <View style={styles.page}>
             <Text style={{ ...FONTS.body2c, color: COLORS.black }}>OTP Verification</Text>
-            <View style={{ marginTop: SIZES.h1 * 6 }}>
-                <Text style={{ ...FONTS.body4, color: COLORS.black, textAlign: 'center', marginBottom: SIZES.h1 * 1.2 }}>Please enter the OTP sent to johndoe@gmail.com or 08132****467</Text>
+            <View style={{ marginTop: SIZES.h1 * 2 }}>
+                <Image source={images.otp} style={{ height: SIZES.h1 * 4, width: SIZES.h1 * 4, alignSelf: 'center' }} />
+                <Text style={{ marginTop: SIZES.h3, ...FONTS.body4, color: COLORS.black, textAlign: 'center', marginBottom: SIZES.h1 * 1.2 }}>Please enter the OTP sent to johndoe@gmail.com or 08132****467</Text>
                 <FlatList
                     data={otpData}
                     numColumns={5}

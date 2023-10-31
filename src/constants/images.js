@@ -1,6 +1,7 @@
 export const analysis = require('../../assets/images/analysis.png')
 export const home1 = require('../../assets/images/home1.png')
 export const home2 = require('../../assets/images/home2.png')
+export const otp = require('../../assets/images/otp.png')
 export const rec = require('../../assets/images/rec.png')
 export const slide1 = require('../../assets/images/slide1.png')
 export const slide2 = require('../../assets/images/slide2.png')
@@ -10,6 +11,7 @@ export default {
     analysis,
     home1,
     home2,
+    otp,
     rec,
     slide1,
     slide2,

@@ -1,8 +1,10 @@
 import { StyleSheet, Text, View, Image, FlatList, TouchableOpacity } from 'react-native'
 import React from 'react'
 import { COLORS, FONTS, images, SIZES } from '../../constants'
+import { useNavigation } from '@react-navigation/native';
 
 const AccountType = () => {
+    const navigation = useNavigation();
     const describeData = [
         {
             id: 1,
@@ -10,12 +12,14 @@ const AccountType = () => {
             description: "Request for loans to boost your business goals",
             point1: 'Means of identification',
             point2: "Bank Verification Number (BVN)",
+            onPress: () => navigation.navigate('Main', { screen: "Bottom" })
         }, {
             id: 2,
             title: "Lender(Investor)",
             description: "Support a small business owner and earn profits",
             point1: 'Means of identification',
             point2: "Bank Verification Number (BVN)",
+            onPress: () => navigation.navigate('Main', { screen: "Bottom2" })
         },
     ];
     return (
@@ -25,7 +29,7 @@ const AccountType = () => {
                 data={describeData}
                 renderItem={({ item }) => {
                     return (
-                        <TouchableOpacity style={styles.container}>
+                        <TouchableOpacity onPress={item.onPress} style={styles.container}>
                             <Image source={images.rec} style={{ height: SIZES.h1 * 4.5, width: SIZES.width * 0.83, borderRadius: SIZES.base }} />
                             <Text style={{ ...FONTS.body3, fontWeight: '700', color: COLORS.black, marginTop: SIZES.base }}>{item.title}</Text>
                             <Text style={{ ...FONTS.body4b, color: COLORS.grey3, marginTop: SIZES.base }}>{item.description}</Text>

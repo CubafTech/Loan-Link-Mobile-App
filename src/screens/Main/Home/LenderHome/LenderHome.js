@@ -74,10 +74,10 @@ const LenderHome = () => {
                     contentContainerStyle={{ paddingHorizontal: SIZES.width * 0.03 }}
                     renderItem={({ item }) => {
                         return (
-                            <View style={{ marginBottom: SIZES.h4, flexDirection: 'row', alignItems: 'center', }}>
-                                <Image source={icons.down} style={{ height: SIZES.h2, width: SIZES.h2 }} />
-                                <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', marginLeft: SIZES.base }}>
-                                    <View>
+                            <View style={{ marginBottom: SIZES.h4, flexDirection: 'row', alignItems: 'center', marginRight: SIZES.h1 }}>
+                                <Image source={icons.up} style={{ height: SIZES.h4, width: SIZES.h4 }} />
+                                <View style={{ flexDirection: 'row', alignItems: 'center', marginLeft: SIZES.h4 }}>
+                                    <View style={{ flex: 1 }}>
                                         <Text style={{ ...FONTS.body4, color: COLORS.black }}>LoanLink</Text>
                                         <View style={{ flexDirection: 'row', alignItems: 'center' }}>
                                             <Text style={{ ...FONTS.body5, color: COLORS.grey3 }}>17-03-2023</Text>
